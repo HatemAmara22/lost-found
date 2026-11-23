@@ -14,17 +14,17 @@ return (
 const styles = StyleSheet.create({
 card: {
 backgroundColor: '#ffffff',
-borderRadius: 12,
+borderRadius: 15,
 padding: 16,
 borderWidth: 1,
 borderColor: '#e5e7eb',
 },
 title: {
-fontSize: 18,
+fontSize: 13,
 fontWeight: '600',
 },
 place: {
 marginTop: 4,
-color: '#6b7280',
+color: '#6b7230',
 },
 });
