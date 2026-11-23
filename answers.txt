@@ -36,3 +36,13 @@ Question 7:
 
 Question 8:
 In the browser, the form inputs and cards stretch across the entire width of the wide desktop window, whereas on the Android emulator they fit a narrow vertical mobile screen. Additionally, fonts, input focus outlines, and button click feedback follow web browser styling instead of native Android styling.
+
+TP 2: ANSWERS
+==================================================
+
+EXERCISE QUESTIONS
+--------------------------------------------------
+
+Question 1:
+- Error message: Property 'claimed' is missing in type '{ id: string; title: string; place: string; }' but required in type 'Item'.
+- Why TypeScript complains: In Exercise 1.1, we updated the Item type definition to require a boolean property named "claimed". Because the objects in STARTER_ITEMS inside index.tsx do not include this new field yet, TypeScript flags a type mismatch error.
