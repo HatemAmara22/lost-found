@@ -1,0 +1,38 @@
+TP 1: ANSWERS
+==================================================
+
+EXERCISE QUESTIONS
+--------------------------------------------------
+
+Question 1:
+They will run "npm install" in the project directory. This command reads package.json and package-lock.json to automatically download and recreate the node_modules/ folder with all required dependencies.
+
+Question 2:
+The two files remaining in src/app/ are:
+- _layout.tsx: Defines the root navigation structure and shared layout wrapper for the screens in the app.
+- index.tsx: Represents the main home screen (the initial route /) displayed when the app opens.
+
+Question 3:
+- Error message: Text strings must be rendered within a <Text> component.
+- Rule: In React Native, raw text cannot be placed directly inside layout components like <View>. Every piece of text must be explicitly wrapped inside a <Text> component so the native UI knows how to render it.
+
+Question 4:
+- Purpose of keyExtractor: It tells FlatList how to extract a unique string key for each item in the array so React can efficiently track, update, reorder, or remove individual list items without re-rendering the entire list.
+- Duplicate IDs: If two items share the same id, React displays a warning ("Encountered two children with the same key"), and the list may render glitches, duplicate rows, or fail to update the right item when the state changes.
+
+Question 5:
+- Counter: Before adding an item, it shows "3 items reported" (or "4" if you kept the fourth starter item). After pressing Add item, it immediately updates to "4 items reported" (or "5").
+- Fields behavior: Both text inputs clear and return to their empty placeholder states ("What did you find?" and "Where?").
+- Lines responsible:
+  setTitle('');
+  setPlace('');
+
+Question 6:
+React state must be treated as immutable. Calling items.push(newItem) mutates the existing array in memory without changing its reference, so React does not detect any change and will not re-render the screen. Using setItems([newItem, ...items]) creates a brand-new array reference and notifies React to update the UI.
+
+Question 7:
+- Screen output: The counter displays "0 items reported", and the list area displays the message "Nothing reported yet." (defined by ListEmptyComponent).
+- Why it is useful: Showing an empty state message gives clear feedback to the user that the app is working properly and that there is simply no data yet, rather than making the screen look broken or still loading.
+
+Question 8:
+In the browser, the form inputs and cards stretch across the entire width of the wide desktop window, whereas on the Android emulator they fit a narrow vertical mobile screen. Additionally, fonts, input focus outlines, and button click feedback follow web browser styling instead of native Android styling.
